@@ -68,7 +68,6 @@ export default function ContactForm() {
                 type="text"
                 id="name"
                 name="name"
-                required
                 value={formData.name}
                 onChange={handleChange}
                 disabled={status === 'submitting'}

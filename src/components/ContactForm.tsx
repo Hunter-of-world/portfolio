@@ -1,11 +1,13 @@
 "use client";
 
 import React, { useState } from 'react';
+import { useI18n } from '../app/i18n';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  const { t } = useI18n();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -41,26 +43,25 @@ export default function ContactForm() {
     <section id="contact" className="py-16 md:py-24 bg-white dark:bg-black border-t border-black dark:border-white">
       <div className="container mx-auto px-6 max-w-2xl">
         <div className="mb-12">
-          <div dir="rtl" className="text-right text-sm text-gray-500 dark:text-gray-400 pb-1 font-arabic">تواصل معي</div>
-          <h2 className="text-3xl font-bold mb-4 text-black dark:text-white uppercase tracking-tight">Get in Touch</h2>
-          <p className="text-gray-600 dark:text-gray-400">Have a project in mind or want to discuss system architecture? Let's talk.</p>
+          <h2 className="text-3xl font-bold mb-4 text-black dark:text-white uppercase tracking-tight">{t.nav.getInTouch}</h2>
+          <p className="text-gray-600 dark:text-gray-400">{t.nav.contactSubtitle}</p>
         </div>
 
         {status === 'success' ? (
           <div className="p-8 border-2 border-black dark:border-white text-center">
-            <h3 className="text-xl font-bold text-black dark:text-white mb-4 uppercase tracking-wider">Message Sent</h3>
-            <p className="text-black dark:text-white mb-8">Thank you for reaching out. I'll get back to you shortly.</p>
+            <h3 className="text-xl font-bold text-black dark:text-white mb-4 uppercase tracking-wider">{t.contact.sent}</h3>
+            <p className="text-black dark:text-white mb-8">{t.contact.sentDesc}</p>
             <button 
               onClick={() => setStatus('idle')}
               className="text-sm font-bold uppercase tracking-wider border-b-2 border-black dark:border-white pb-1 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
             >
-              Send another message
+              {t.contact.sendAnother}
             </button>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-bold uppercase tracking-wider text-black dark:text-white mb-2">Name</label>
+              <label htmlFor="name" className="block text-sm font-bold uppercase tracking-wider text-black dark:text-white mb-2">{t.contact.name}</label>
               <input
                 type="text"
                 id="name"
@@ -76,7 +77,7 @@ export default function ContactForm() {
             </div>
             
             <div>
-              <label htmlFor="email" className="block text-sm font-bold uppercase tracking-wider text-black dark:text-white mb-2">Email</label>
+              <label htmlFor="email" className="block text-sm font-bold uppercase tracking-wider text-black dark:text-white mb-2">{t.contact.email}</label>
               <input
                 type="email"
                 id="email"
@@ -92,7 +93,7 @@ export default function ContactForm() {
             </div>
             
             <div>
-              <label htmlFor="message" className="block text-sm font-bold uppercase tracking-wider text-black dark:text-white mb-2">Message</label>
+              <label htmlFor="message" className="block text-sm font-bold uppercase tracking-wider text-black dark:text-white mb-2">{t.contact.message}</label>
               <textarea
                 id="message"
                 name="message"
@@ -108,7 +109,7 @@ export default function ContactForm() {
             </div>
 
             {status === 'error' && (
-              <div className="text-black dark:text-white font-bold border-l-4 border-black dark:border-white pl-4 py-2">
+              <div className="text-black dark:text-white font-bold border-s-4 border-black dark:border-white ps-4 py-2">
                 {errorMessage || 'Failed to send the message. Please try again.'}
               </div>
             )}
@@ -118,7 +119,7 @@ export default function ContactForm() {
               disabled={status === 'submitting'}
               className="w-full bg-black dark:bg-white text-white dark:text-black font-bold uppercase tracking-widest py-5 px-8 hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors disabled:opacity-70 flex justify-center items-center"
             >
-              {status === 'submitting' ? 'SENDING...' : 'SEND MESSAGE'}
+              {status === 'submitting' ? t.contact.sending : t.contact.sendMessage}
             </button>
           </form>
         )}

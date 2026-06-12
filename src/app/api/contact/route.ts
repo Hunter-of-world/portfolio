@@ -1,50 +1,34 @@
 import { NextResponse } from 'next/server';
-import { contactSchema } from '@/lib/schema';
+import { Resend } from 'resend';
 
-export async function POST(request: Request) {
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+export async function POST(req: Request) {
   try {
-    const payload = await request.json();
+    const body = await req.json();
+    const { name, email, message } = body;
 
-    const validationResult = contactSchema.safeParse(payload);
-
-    if (!validationResult.success) {
-      return NextResponse.json(
-        { errors: validationResult.error.format() },
-        { status: 400 }
-      );
+    if (!name || !email || !message) {
+      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
-    const webhookUrl = process.env.N8N_WEBHOOK_URL || 'https://mock-n8n-webhook.local';
-
-    const webhookResponse = await fetch(webhookUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(validationResult.data),
-    });
-
-    if (!webhookResponse.ok) {
-      throw new Error(`Failed to forward data to webhook. Status: ${webhookResponse.status}`);
+    if (message.length < 10) {
+      return NextResponse.json({ error: 'Message must be at least 10 characters.' }, { status: 400 });
     }
 
-    return NextResponse.json(
-      { success: true, message: 'Data successfully forwarded' },
-      { status: 200 }
-    );
-  } catch (error: any) {
-    // Simulating Sentry error tracking standards
-    console.error('[Sentry - Error Capture]', {
-      message: error.message || 'Unknown server error',
-      stack: error.stack,
-      timestamp: new Date().toISOString(),
-      endpoint: '/api/contact',
-      method: 'POST',
+    const { data, error } = await resend.emails.send({
+      from: 'Portfolio Contact <onboarding@resend.dev>',
+      to: 'zaidmarwantt@gmail.com',
+      subject: `New Message from ${name}`,
+      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     });
 
-    return NextResponse.json(
-      { error: 'Internal Server Error' },
-      { status: 500 }
-    );
+    if (error) {
+      return NextResponse.json({ error: error.message }, { status: 500 });
+    }
+
+    return NextResponse.json({ success: true, data });
+  } catch (error) {
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }

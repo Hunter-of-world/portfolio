@@ -7,7 +7,7 @@ const dictionary = {
     hero: {
       name: "زيد مروان نجاح",
       title: "مهندس نظم ومطور",
-      subtitle: "سد الفجوة بين بنية النظم القوية والتطبيقات الشاملة القابلة للتوسع. متخصص في تنسيق الذكاء الاصطناعي، شبكات IoT، وتجارب الويب الحديثة.",
+      subtitle: "سد الفجوة بين الأجهزة المادية والبنية التحتية الآمنة للبرمجيات. متخصص في بنية الذكاء الاصطناعي المحلي اللامركزي، والأنظمة المدمجة (SCADA)، وخطوط أنابيب البيانات المؤتمتة.",
       viewWork: "عرض الأعمال",
       contactMe: "تواصل معي"
     },
@@ -133,7 +133,7 @@ const dictionary = {
     hero: {
       name: "Zaid Marwan Najah",
       title: "System Engineer & Developer",
-      subtitle: "Bridging the gap between robust system architecture and scalable full-stack applications. Specializing in AI orchestration, IoT networks, and modern web experiences.",
+      subtitle: "Bridging the gap between physical hardware and secure software infrastructure. Specializing in decentralized local AI architecture, SCADA embedded systems, and automated data pipelines.",
       viewWork: "View Work",
       contactMe: "Contact Me"
     },

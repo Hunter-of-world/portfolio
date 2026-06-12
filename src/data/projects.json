@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "id": "1",
+    "title": "Local LLM Orchestrator",
+    "description": "A local deployment orchestrator using Ollama to manage multiple large language models, interconnected securely via Tailscale across distributed edge devices.",
+    "role": "System Architect",
+    "techStack": ["Ollama", "Tailscale", "Docker", "Python", "Bash"],
+    "repoLink": "https://github.com/example/local-llm-orchestrator",
+    "liveLink": null,
+    "category": "Software & AI"
+  },
+  {
+    "id": "2",
+    "title": "Hardware Sensor Network",
+    "description": "IoT monitoring system utilizing Arduino and ESP8266 devices to gather environmental data, continuously synced to a central Zabbix server for real-time alerting.",
+    "role": "IoT Developer",
+    "techStack": ["Arduino", "ESP8266", "C++", "Zabbix", "MQTT"],
+    "repoLink": "https://github.com/example/hardware-sensor-network",
+    "liveLink": null,
+    "category": "Hardware & IoT"
+  },
+  {
+    "id": "3",
+    "title": "Full-Stack System Dashboard",
+    "description": "A centralized dashboard providing a high-level view of infrastructure health, integrating telemetry from AI nodes and IoT devices into a unified React interface.",
+    "role": "Full-Stack Engineer",
+    "techStack": ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
+    "repoLink": "https://github.com/example/system-dashboard",
+    "liveLink": "https://dashboard.example.com",
+    "category": "Software & AI"
+  }
+]

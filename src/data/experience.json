@@ -1,1 +1,35 @@
-[]
+[
+  {
+    "id": "1",
+    "organization": "Computiq",
+    "role": "UniTech Ambassador",
+    "timeline": "2024 - Present",
+    "achievements": [
+      "Facilitated technical workshops on full-stack development and system architecture.",
+      "Mentored junior students in adopting modern web technologies and AI integration."
+    ],
+    "tags": ["Leadership", "Mentorship", "Public Speaking"]
+  },
+  {
+    "id": "2",
+    "organization": "Makers",
+    "role": "HR Intern",
+    "timeline": "2023 - 2024",
+    "achievements": [
+      "Streamlined onboarding processes by building an internal candidate tracking system.",
+      "Collaborated with engineering teams to map technical requirements for incoming hires."
+    ],
+    "tags": ["HR", "Internal Tools", "Communication"]
+  },
+  {
+    "id": "3",
+    "organization": "University",
+    "role": "Information and Communication Engineering Student",
+    "timeline": "2021 - Present",
+    "achievements": [
+      "Specialized in IoT, networking, and system-level programming.",
+      "Developed an Arduino-based monitoring system for the final year project."
+    ],
+    "tags": ["Education", "Engineering", "IoT"]
+  }
+]

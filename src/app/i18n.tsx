@@ -68,16 +68,16 @@ const dictionary = {
     pillars: {
       data: [
         {
-          title: 'البرمجيات والذكاء الاصطناعي',
-          description: <>بناء تطبيقات شاملة قوية وتنسيقات ذكاء اصطناعي محلية باستخدام أدوات مثل <span dir="ltr" className="inline-block mx-1">Next.js</span> و <span dir="ltr" className="inline-block mx-1">Node.js</span> و <span dir="ltr" className="inline-block mx-1">Ollama</span>.</>
+          title: 'البرمجيات والذكاء الاصطناعي المحلي',
+          description: <>بناء بنية تحتية قوية للواجهات الخلفية، أتمتة مسارات البيانات، وهندسة نماذج الذكاء الاصطناعي اللامركزية باستخدام بايثون، <span dir="ltr" className="inline-block mx-1">C++</span>، وأنفاق الشبكات الافتراضية الآمنة.</>
         },
         {
-          title: 'الأجهزة و IoT',
-          description: <>تصميم حلول أجهزة منخفضة المستوى ومراقبة الشبكات باستخدام <span dir="ltr" className="inline-block mx-1">Arduino</span> و <span dir="ltr" className="inline-block mx-1">ESP8266</span> و <span dir="ltr" className="inline-block mx-1">Zabbix</span>.</>
+          title: 'الأجهزة والأنظمة المدمجة',
+          description: <>تصميم حلول القياس عن بعد وأنظمة التحكم المنطقي المادي. تخصص دقيق في المنطق الرقمي النقي <span dir="ltr" className="inline-block mx-1">TTL</span>، تكامل أنظمة <span dir="ltr" className="inline-block mx-1">SCADA</span>، والمراقبة المستمرة للشبكات عبر <span dir="ltr" className="inline-block mx-1">Zabbix</span>.</>
         },
         {
-          title: 'القيادة',
-          description: <>توجيه الفرق، وتدريب الزملاء كسفير لـ <span dir="ltr" className="inline-block mx-1">UniTech</span>، وتبسيط العمليات التشغيلية.</>
+          title: 'العمليات والاستراتيجية',
+          description: <>هندسة مسارات الكفاءات وتوسيع النظم التقنية. ترجمة المتطلبات الهندسية المعقدة إلى عمليات تشغيلية فعلية للقطاع الخاص.</>
         }
       ]
     },

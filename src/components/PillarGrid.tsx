@@ -6,19 +6,19 @@ export default function PillarGrid() {
   const { t, getPillar } = useI18n();
   const pillars = [
     {
-      title: 'Software & AI',
-      description: 'Building robust full-stack applications and local AI orchestrations utilizing tools like Next.js, Node.js, and Ollama.',
+      title: 'SOFTWARE & LOCAL AI',
+      description: 'Building robust backend infrastructure, automated data pipelines, and decentralized local LLM orchestration utilizing Python, C++, and secure VPN tunneling.',
       icon: 'SYS'
     },
     {
-      title: 'Hardware & IoT',
-      description: 'Designing low-level hardware solutions and monitoring networks with Arduino, ESP8266, and Zabbix.',
+      title: 'HARDWARE & EMBEDDED SYSTEMS',
+      description: 'Designing low-level telemetry solutions and physical logic control. Specializing in pure TTL digital logic, SCADA integrations, and continuous network monitoring via Zabbix.',
       icon: 'HW'
     },
     {
-      title: 'Leadership',
-      description: 'Guiding teams, mentoring peers as a UniTech Ambassador, and streamlining operational processes.',
-      icon: 'LDR'
+      title: 'OPERATIONS & STRATEGY',
+      description: 'Architecting talent pipelines and scaling technical ecosystems. Translating complex engineering requirements into operational private-sector deployment.',
+      icon: 'OPS'
     }
   ];
 

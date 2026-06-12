@@ -1,32 +1,6 @@
 [
-  {
-    "id": "1",
-    "title": "Local LLM Orchestrator",
-    "description": "A local deployment orchestrator using Ollama to manage multiple large language models, interconnected securely via Tailscale across distributed edge devices.",
-    "role": "System Architect",
-    "techStack": ["Ollama", "Tailscale", "Docker", "Python", "Bash"],
-    "repoLink": "https://github.com/example/local-llm-orchestrator",
-    "liveLink": null,
-    "category": "Software & AI"
-  },
-  {
-    "id": "2",
-    "title": "Hardware Sensor Network",
-    "description": "IoT monitoring system utilizing Arduino and ESP8266 devices to gather environmental data, continuously synced to a central Zabbix server for real-time alerting.",
-    "role": "IoT Developer",
-    "techStack": ["Arduino", "ESP8266", "C++", "Zabbix", "MQTT"],
-    "repoLink": "https://github.com/example/hardware-sensor-network",
-    "liveLink": null,
-    "category": "Hardware & IoT"
-  },
-  {
-    "id": "3",
-    "title": "Full-Stack System Dashboard",
-    "description": "A centralized dashboard providing a high-level view of infrastructure health, integrating telemetry from AI nodes and IoT devices into a unified React interface.",
-    "role": "Full-Stack Engineer",
-    "techStack": ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
-    "repoLink": "https://github.com/example/system-dashboard",
-    "liveLink": "https://dashboard.example.com",
-    "category": "Software & AI"
-  }
+  { "id": "1", "title": "Decentralized Local AI Coding Assistant", "description": "Engineered a distributed, secure AI infrastructure by splitting processing and gateway routing across two physical machines over a Tailscale VPN tunnel. Configured Ollama with Qwen2.5-coder:14b on the desktop node, routed API tool calling via OpenClaw and Tavily on the laptop gateway, and decoupled the UI by wiring the system into a private Discord bot for secure mobile access.", "role": "Systems & Network Architect", "techStack": ["Ollama", "Qwen2.5-coder:14b", "OpenClaw", "Tailscale", "Ubuntu systemd", "Discord API", "Tavily API", "JSON"], "category": "Software Automation & Local AI" },
+  { "id": "2", "title": "SCADA Smart Traffic Light System & Digital Twin", "description": "Designed a physical traffic control system using pure 74-series TTL digital logic on breadboards, bypassing standard microcontrollers for base logic. Utilized an Arduino Mega as a passive telemetry wiretap to read binary states and transmit them via a Web Serial API bridge to a live HTML/CSS/JS dashboard featuring zero-latency 2D physics simulation.", "role": "Hardware/Software Integrator", "techStack": ["TTL Digital Logic", "Arduino Mega", "Web Serial API", "HTML", "CSS", "JavaScript"], "category": "Hardware & Embedded Systems" },
+  { "id": "3", "title": "Automated HR Data Processing Pipeline", "description": "Engineered a data automation pipeline to bridge human resources and engineering operations, replacing manual data entry. Automated the collection, validation, and processing of over 2,000 business records, loading them directly into the production database.", "role": "Data Pipeline Engineer", "techStack": ["Python", "Pandas", "Database Management"], "category": "Software Automation & Local AI" },
+  { "id": "4", "title": "Hardware & Network Telemetry Monitoring", "description": "Configured real-time hardware and network monitoring infrastructure within a dual-boot Ubuntu/Windows environment. Integrated with embedded systems to read physical telemetry and monitor system bottlenecks.", "role": "Network & IoT Engineer", "techStack": ["Zabbix", "Wireshark", "Linux Administration", "ESP8266", "Arduino"], "category": "Hardware & Embedded Systems" }
 ]

@@ -12,17 +12,18 @@ export default function Home() {
   const experiences = experienceData as Experience[];
 
   return (
-    <main className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-gray-100">
+    <main className="min-h-screen bg-white dark:bg-black text-black dark:text-white">
       <Hero />
       <PillarGrid />
       
-      <section id="projects" className="py-16 md:py-24 bg-white dark:bg-black">
-        <div className="container mx-auto px-6 max-w-6xl">
+      <section id="projects" className="py-16 md:py-24 bg-white dark:bg-black border-t border-black dark:border-white">
+        <div className="container mx-auto px-6 max-w-4xl">
           <div className="mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">Featured Projects</h2>
+            <div dir="rtl" className="text-right text-sm text-gray-500 dark:text-gray-400 pb-1 font-arabic">المشاريع</div>
+            <h2 className="text-3xl font-bold tracking-tight text-black dark:text-white uppercase">Featured Projects</h2>
             <p className="text-gray-600 dark:text-gray-400 mt-2">A selection of recent engineering work and technical architecture.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-col gap-12">
             {projects.map(project => (
               <ProjectCard key={project.id} project={project} />
             ))}

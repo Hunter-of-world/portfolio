@@ -17,37 +17,41 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 flex flex-col h-full hover:border-gray-400 dark:hover:border-gray-600 transition-colors">
-      <div className="flex-grow">
-        <div className="flex justify-between items-start mb-4">
-          <span className="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 px-2 py-1">
-            {project.category}
-          </span>
-          <span className="text-sm font-medium text-gray-500">{project.role}</span>
-        </div>
-        <h3 className="text-2xl font-bold mb-3 text-gray-900 dark:text-gray-100">{project.title}</h3>
-        <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-          {project.description}
-        </p>
+    <div className="border-2 border-black dark:border-white bg-white dark:bg-black p-8 flex flex-col">
+      <div className="flex flex-col gap-2 mb-6">
+        <span className="text-xs font-bold uppercase tracking-widest text-black dark:text-white border border-black dark:border-white px-3 py-1 w-fit">
+          {project.category}
+        </span>
+        <span className="text-sm font-bold text-gray-600 dark:text-gray-400 uppercase tracking-wider">{project.role}</span>
       </div>
       
-      <div>
-        <div className="flex flex-wrap gap-2 mb-6">
-          {project.techStack.map((tech, idx) => (
-            <span key={idx} className="text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-2 py-1">
-              {tech}
-            </span>
-          ))}
+      <h3 className="text-3xl font-bold mb-4 text-black dark:text-white uppercase tracking-tight">{project.title}</h3>
+      
+      <p className="text-lg text-black dark:text-white mb-8 leading-relaxed border-l-4 border-black dark:border-white pl-4">
+        {project.description}
+      </p>
+      
+      <div className="mt-auto">
+        <div className="flex flex-col gap-3 mb-8">
+          <span className="text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400">Tech Stack</span>
+          <div className="flex flex-wrap gap-2">
+            {project.techStack.map((tech, idx) => (
+              <span key={idx} className="text-xs font-bold uppercase tracking-wider border border-black dark:border-white text-black dark:text-white px-3 py-1">
+                {tech}
+              </span>
+            ))}
+          </div>
         </div>
-        <div className="flex gap-4">
+        
+        <div className="flex flex-col md:flex-row gap-4 border-t border-black dark:border-white pt-6">
           {project.repoLink && (
-            <a href={project.repoLink} target="_blank" rel="noreferrer" className="text-sm font-semibold underline underline-offset-4 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-              Repository
+            <a href={project.repoLink} target="_blank" rel="noreferrer" className="text-sm font-bold uppercase tracking-widest flex items-center gap-2 hover:opacity-70 transition-opacity">
+              <span>[</span> Repository <span>]</span>
             </a>
           )}
           {project.liveLink && (
-            <a href={project.liveLink} target="_blank" rel="noreferrer" className="text-sm font-semibold underline underline-offset-4 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-              Live Demo
+            <a href={project.liveLink} target="_blank" rel="noreferrer" className="text-sm font-bold uppercase tracking-widest flex items-center gap-2 hover:opacity-70 transition-opacity">
+              <span>[</span> Live Demo <span>]</span>
             </a>
           )}
         </div>

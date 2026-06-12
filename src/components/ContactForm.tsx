@@ -38,20 +38,21 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+    <section id="contact" className="py-16 md:py-24 bg-white dark:bg-black border-t border-black dark:border-white">
       <div className="container mx-auto px-6 max-w-2xl">
-        <div className="mb-10 text-center">
-          <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">Get in Touch</h2>
+        <div className="mb-12">
+          <div dir="rtl" className="text-right text-sm text-gray-500 dark:text-gray-400 pb-1 font-arabic">تواصل معي</div>
+          <h2 className="text-3xl font-bold mb-4 text-black dark:text-white uppercase tracking-tight">Get in Touch</h2>
           <p className="text-gray-600 dark:text-gray-400">Have a project in mind or want to discuss system architecture? Let's talk.</p>
         </div>
 
         {status === 'success' ? (
-          <div className="p-6 bg-green-50 border border-green-200 dark:bg-green-900/20 dark:border-green-800 rounded text-center">
-            <h3 className="text-lg font-bold text-green-800 dark:text-green-400 mb-2">Message Sent Successfully!</h3>
-            <p className="text-green-700 dark:text-green-500">Thank you for reaching out. I'll get back to you shortly.</p>
+          <div className="p-8 border-2 border-black dark:border-white text-center">
+            <h3 className="text-xl font-bold text-black dark:text-white mb-4 uppercase tracking-wider">Message Sent</h3>
+            <p className="text-black dark:text-white mb-8">Thank you for reaching out. I'll get back to you shortly.</p>
             <button 
               onClick={() => setStatus('idle')}
-              className="mt-6 text-sm font-semibold underline text-green-800 dark:text-green-400"
+              className="text-sm font-bold uppercase tracking-wider border-b-2 border-black dark:border-white pb-1 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
             >
               Send another message
             </button>
@@ -59,7 +60,7 @@ export default function ContactForm() {
         ) : (
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
+              <label htmlFor="name" className="block text-sm font-bold uppercase tracking-wider text-black dark:text-white mb-2">Name</label>
               <input
                 type="text"
                 id="name"
@@ -68,14 +69,14 @@ export default function ContactForm() {
                 value={formData.name}
                 onChange={handleChange}
                 disabled={status === 'submitting'}
-                className={`w-full p-3 border bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                  status === 'error' ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'
+                className={`w-full p-4 border-2 bg-transparent text-black dark:text-white focus:outline-none focus:ring-0 ${
+                  status === 'error' ? 'border-black dark:border-white' : 'border-black dark:border-white'
                 } disabled:opacity-50`}
               />
             </div>
             
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
+              <label htmlFor="email" className="block text-sm font-bold uppercase tracking-wider text-black dark:text-white mb-2">Email</label>
               <input
                 type="email"
                 id="email"
@@ -84,14 +85,14 @@ export default function ContactForm() {
                 value={formData.email}
                 onChange={handleChange}
                 disabled={status === 'submitting'}
-                className={`w-full p-3 border bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                  status === 'error' ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'
+                className={`w-full p-4 border-2 bg-transparent text-black dark:text-white focus:outline-none focus:ring-0 ${
+                  status === 'error' ? 'border-black dark:border-white' : 'border-black dark:border-white'
                 } disabled:opacity-50`}
               />
             </div>
             
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
+              <label htmlFor="message" className="block text-sm font-bold uppercase tracking-wider text-black dark:text-white mb-2">Message</label>
               <textarea
                 id="message"
                 name="message"
@@ -100,14 +101,14 @@ export default function ContactForm() {
                 value={formData.message}
                 onChange={handleChange}
                 disabled={status === 'submitting'}
-                className={`w-full p-3 border bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none ${
-                  status === 'error' ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'
+                className={`w-full p-4 border-2 bg-transparent text-black dark:text-white focus:outline-none focus:ring-0 resize-none ${
+                  status === 'error' ? 'border-black dark:border-white' : 'border-black dark:border-white'
                 } disabled:opacity-50`}
               />
             </div>
 
             {status === 'error' && (
-              <div className="text-red-600 dark:text-red-400 text-sm font-medium">
+              <div className="text-black dark:text-white font-bold border-l-4 border-black dark:border-white pl-4 py-2">
                 {errorMessage || 'Failed to send the message. Please try again.'}
               </div>
             )}
@@ -115,19 +116,9 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={status === 'submitting'}
-              className="w-full bg-black dark:bg-white text-white dark:text-black font-bold py-4 px-8 hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors disabled:opacity-70 flex justify-center items-center"
+              className="w-full bg-black dark:bg-white text-white dark:text-black font-bold uppercase tracking-widest py-5 px-8 hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors disabled:opacity-70 flex justify-center items-center"
             >
-              {status === 'submitting' ? (
-                <span className="flex items-center gap-2">
-                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                  </svg>
-                  Sending...
-                </span>
-              ) : (
-                'Send Message'
-              )}
+              {status === 'submitting' ? 'SENDING...' : 'SEND MESSAGE'}
             </button>
           </form>
         )}

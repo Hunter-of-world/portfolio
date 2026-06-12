@@ -7,7 +7,7 @@ const dictionary = {
     hero: {
       name: "زيد مروان نجاح",
       title: "مهندس نظم ومطور",
-      subtitle: "سد الفجوة بين بنية النظم القوية والتطبيقات الشاملة القابلة للتوسع. متخصص في تنسيق الذكاء الاصطناعي، شبكات إنترنت الأشياء، وتجارب الويب الحديثة.",
+      subtitle: "سد الفجوة بين بنية النظم القوية والتطبيقات الشاملة القابلة للتوسع. متخصص في تنسيق الذكاء الاصطناعي، شبكات IoT، وتجارب الويب الحديثة.",
       viewWork: "عرض الأعمال",
       contactMe: "تواصل معي"
     },
@@ -60,7 +60,7 @@ const dictionary = {
         "4": {
           title: "مراقبة الأجهزة والشبكات والقياس عن بعد",
           description: <>تكوين بنية تحتية لمراقبة الأجهزة والشبكات في الوقت الفعلي ضمن بيئة إقلاع مزدوج <span dir="ltr" className="inline-block mx-1">Ubuntu/Windows</span>. التكامل مع الأنظمة المدمجة لقراءة القياس الفعلي عن بعد ومراقبة اختناقات النظام.</>,
-          role: "مهندس شبكات وإنترنت الأشياء",
+          role: "مهندس شبكات و IoT",
           category: "الأجهزة والأنظمة المدمجة"
         }
       }
@@ -72,7 +72,7 @@ const dictionary = {
           description: <>بناء تطبيقات شاملة قوية وتنسيقات ذكاء اصطناعي محلية باستخدام أدوات مثل <span dir="ltr" className="inline-block mx-1">Next.js</span> و <span dir="ltr" className="inline-block mx-1">Node.js</span> و <span dir="ltr" className="inline-block mx-1">Ollama</span>.</>
         },
         {
-          title: 'الأجهزة وإنترنت الأشياء',
+          title: 'الأجهزة و IoT',
           description: <>تصميم حلول أجهزة منخفضة المستوى ومراقبة الشبكات باستخدام <span dir="ltr" className="inline-block mx-1">Arduino</span> و <span dir="ltr" className="inline-block mx-1">ESP8266</span> و <span dir="ltr" className="inline-block mx-1">Zabbix</span>.</>
         },
         {

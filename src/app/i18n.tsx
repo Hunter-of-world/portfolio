@@ -85,22 +85,26 @@ const dictionary = {
       technologies: "التقنيات والمهارات",
       data: {
         "1": {
-          role: "مطور واجهة أمامية، مهندس نظم",
-          organization: "مشاريع مستقلة",
-          timeline: "2023 - الحاضر",
+          role: "منسق برامج تقنية",
+          organization: "Computiq & Hub200",
+          timeline: "حزيران 2026 - الحاضر",
           achievements: [
-            <>تم بناء تطبيقات <span dir="ltr" className="inline-block mx-1">Jamstack</span> باستخدام <span dir="ltr" className="inline-block mx-1">React/Next.js</span> مع مسارات واجهة برمجة تطبيقات بدون خوادم للتسليم الأمثل.</>,
-            <>إعداد أتمتة نصوص <span dir="ltr" className="inline-block mx-1">Python</span> للتفاعل المباشر مع واجهات برمجة التطبيقات.</>
+            <>تطوير محرك تحليل سير ذاتية مدفوع بالذكاء الاصطناعي لمنصة <span dir="ltr" className="inline-block mx-1">'Academy'</span> التابعة لـ <span dir="ltr" className="inline-block mx-1">Computiq</span>، مما يؤتمت استخراج مهارات المرشحين، إنشاء ملفات تعريف المستخدمين، وتقديم توصيات مخصصة للدورات.</>,
+            "هندسة خط إنتاج تعليمي دائم وعالي الجودة للبث واستوديو تسجيل من الصفر للقضاء على اختناقات الأجهزة والبرمجيات.",
+            <>حل مشاكل الاختناق الحراري وتغير التركيز عن طريق قفل أجهزة الكاميرا في الوضع اليدوي، خفض التسجيل الداخلي إلى <span dir="ltr" className="inline-block mx-1">1080p</span>، وتجاوز حدود المصنع.</>,
+            <>تصميم ومعايرة نظام إضاءة <span dir="ltr" className="inline-block mx-1">Godox</span> مزدوج صارم بدرجة <span dir="ltr" className="inline-block mx-1">5500K</span> لضمان ألوان قياسية للبث وعمق سينمائي.</>,
+            <>تجاوز قيود <span dir="ltr" className="inline-block mx-1">USB</span> القياسية عن طريق ربط أجهزة الالتقاط مباشرة بمنافذ عالية السرعة، وقفل <span dir="ltr" className="inline-block mx-1">OBS</span> على إطار <span dir="ltr" className="inline-block mx-1">60fps</span> باستخدام العرض المادي <span dir="ltr" className="inline-block mx-1">NVIDIA NVENC H.264</span>.</>
           ],
           tags: []
         },
         "2": {
-          role: "طالب هندسة نظم",
-          organization: "الجامعة الوطنية",
-          timeline: "2021 - الحاضر",
+          role: <>سفير <span dir="ltr" className="inline-block mx-1">UniTech</span></>,
+          organization: "Computiq & Hub200",
+          timeline: "آذار 2026 - الحاضر",
           achievements: [
-            "التركيز على هندسة الشبكات وتصميم المعالجات الدقيقة.",
-            "مشاركة قيادية في هاكاثون الروبوتات والأنظمة المدمجة."
+            "تصميم مسارات استراتيجية بين التخصصات الهندسية الجامعية والمتطلبات التشغيلية للقطاع الخاص لتوسيع النظام البيئي للمواهب التقنية المحلية.",
+            <>نشر مسارات بناء القدرات الرقمية عالية القيمة (<span dir="ltr" className="inline-block mx-1">AWS, Cisco</span>) عن طريق ربط المواهب الهندسية الجامعية مباشرة بالأنظمة التشغيلية للقطاع الخاص.</>,
+            "تحديد المواهب التقنية ذات الإمكانات العالية داخل الأوساط الأكاديمية وربطهم مباشرة بالتطبيقات الصناعية العملية وبيئات العمل المؤسسية."
           ],
           tags: []
         },

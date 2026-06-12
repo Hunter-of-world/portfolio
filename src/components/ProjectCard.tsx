@@ -55,9 +55,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
         
         <div className="flex flex-col gap-4 border-t border-black dark:border-white pt-6">
-          <a href={translatedProject.repoLink || "#"} target="_blank" rel="noreferrer" className="text-lg font-black uppercase tracking-widest text-black dark:text-white hover:underline decoration-4 underline-offset-4 transition-all w-fit">
-            {t.projects.viewRepository}
-          </a>
           <div className="flex flex-col md:flex-row gap-4 mt-2">
             {translatedProject.liveLink && (
               <a href={translatedProject.liveLink} target="_blank" rel="noreferrer" className="text-sm font-bold uppercase tracking-widest flex items-center gap-2 hover:opacity-70 transition-opacity">

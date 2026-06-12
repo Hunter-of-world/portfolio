@@ -20,7 +20,8 @@ const dictionary = {
       careerTitle: "الخبرة المهنية",
       contact: "تواصل معي",
       getInTouch: "لنبقَ على تواصل",
-      contactSubtitle: "هل لديك مشروع في ذهنك أو ترغب في مناقشة بنية النظم؟ لنتحدث."
+      contactSubtitle: "هل لديك مشروع في ذهنك أو ترغب في مناقشة بنية النظم؟ لنتحدث.",
+      socialMedia: "وسائل التواصل الاجتماعي"
     },
     contact: {
       name: "الاسم",
@@ -145,7 +146,8 @@ const dictionary = {
       careerTitle: "Career & Experience",
       contact: "Contact",
       getInTouch: "Get in Touch",
-      contactSubtitle: "Have a project in mind or want to discuss system architecture? Let's talk."
+      contactSubtitle: "Have a project in mind or want to discuss system architecture? Let's talk.",
+      socialMedia: "Social Media"
     },
     contact: {
       name: "Name",

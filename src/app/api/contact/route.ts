@@ -12,8 +12,9 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
-    if (message.length < 10) {
-      return NextResponse.json({ error: 'Message must be at least 10 characters.' }, { status: 400 });
+    const wordCount = message.trim().split(/\s+/).filter(Boolean).length;
+    if (wordCount < 1) {
+      return NextResponse.json({ error: 'Message must be at least 1 word.' }, { status: 400 });
     }
 
     const { data, error } = await resend.emails.send({

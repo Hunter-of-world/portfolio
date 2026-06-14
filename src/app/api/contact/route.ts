@@ -12,6 +12,11 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return NextResponse.json({ error: 'Please provide a valid email address.' }, { status: 400 });
+    }
+
     const wordCount = message.trim().split(/\s+/).filter(Boolean).length;
     if (wordCount < 1) {
       return NextResponse.json({ error: 'Message must be at least 1 word.' }, { status: 400 });
